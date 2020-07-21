@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head><title>HTML5 and CSS3</title>
+        <style>
+            /*For Advance selectors
+            div p{
+            }<!--It is used to select all p tags within a div-->
+            h3 ~ p{
+            
+            }<!--It is used to select all p tags after h3-->
+            h3 + p{
+                
+            }<!--It is used to select only one p tag after h3-->
+            a[target]{
+                color:red;
+            }<!--It will select all tags with targe-->*/
+            /*
+            Will contain the stuff for pseudo class
+            a:hover{
+                text-decoration:underline;/*It will make underline only when the user hover over it*/
+            /*}
+            input:focus{
+                background-color:red;/*It will turn the input background to red when it is in focus
+            }
+            /*Various examples of pseudo classes*/
+            /*input:disabled{}
+            input:enabled{}
+            input:checked{}
+            p:first-child{}/*it will select the first paragraph in each div*/
+            /*p:last-child{}/*it will select the last paragraph in each div*/
+            /*p:first-of-type{}/*it will select on that which is in body without any div*/
+            /*p:only-child{};/*last-of-type and only-of-type also allowed*/
+            /*tr:nth-child(2n){}/*will select even rows and nth-last-child will count backwards and nth-of-type will count those of certain types*/
+            /*div:empty{}/*will select empty divs*/
+            /*p:not(.green){}/*will select paragrph which dont have green class*/
+            /*:not(div){}/*will select everything except the divs*/
+            /*p:first-letter{}/*will select the first letter of the para and first-line is also allowed*/
+            /*a:after{}/*putting something after a link*/
+        
+            /*Shadows and Gradients
+            #lineargradient{
+                width:500px;
+                height:300px;
+                background-color:blue;/*for browser that dont support it
+                background:linear-gradient(to right,white,blue);/*Can have multiple colors too, can have various directions too
+            }
+            #radialgradient{
+                width:500px;
+                height:300px;
+                background-color:blue;/*for browser that dont support it
+                background:radial-gradient(white,blue, green, red);/*Can have multiple colors too
+                
+            }
+            h2{
+                text-shadow:2px 2px 4px red;/*2px right and 2 px down with shadow of red color with 4px blur
+            }
+            h3{
+                text-shadow:0 0 5px green;/*will create a glow like neon
+            }
+            h4{
+                text-shadow: 5px 5px 4px red,-3px -3px 2px green;/*For multiple shadows
+            }
+            #box{
+                width:200px;
+                height:200px;
+                background-color:antiquewhite;
+                box-shadow:3px 3px 5px red;/*3 right 3 down 5 blur and with red color
+            }*/
+            
+            /*Transformations and Animations
+            #box1{
+                width:100px;
+                height:100px;
+                background-color:red;
+                border-radius:10px;
+                transition:1s ease-in-out ;//It will play the transition for 1s and ease in out method
+                font-family:"ariel";
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-size:250%;
+            }
+            #box1:hover{*/
+                /*2d transformation
+                transform: translate(50px, 50px);Will translate
+                transform: rotate(40deg);will roate it by 40 deg
+                transform: scale(2, 4);Will scale the div
+                transform: skew(20deg, 30deg); will skew the div*/
+                /*3d transformation
+                transform:rotateX(180deg);//will rotate it by 180 deg in x-axis
+                transform:rotateY(180deg);//will rotate it by 180 deg in y-axis
+                transform:rotateZ(180deg);//will rotate it by 180 deg in z-axis
+            }*/
+            /*Layout and calculations*/
+            #multicol{
+                column-count:3;
+                column-gap:40px;
+                column-rule-style:solid;
+                column-rule-width:2px;
+                column-rule-color:blue;
+                column-rule-style:solid;
+                column-rule-width:2px;
+                column-rule-color:blue;
+                column-rule-style:solid;
+                column-rule-width:2px;
+                column-rule-color:blue;
+            }
+            h1{
+                column-span:all;
+            }
+            body{
+                margin:0;
+            }
+            header{
+                width:100%;
+                height:50px;
+                background-color:grey;
+            }
+            #container{
+                width:100%;
+                height:calc(100% - 50px);
+                position:absolute;
+                background-color:green;
+            }
+            .flexbox-container{
+                display:flex;
+                width:50%;
+                height:300px;
+                background-color:red;
+                /*flex-direction:row-reverse;/*will change the direction n all*/
+                flex-wrap:wrap;/*will wrap it*/
+                box-sizing:border-box;/*It will now include border within the declared wisth and height*/
+            }
+            .flexbox-container-item{
+                width:100px;
+                height:100px;
+                background-color:aquamarine;
+                margin:10px;
+                
+            }
+            /*Well we can use calc() in css to do some sort of calculation like we want the height to 50px less than the total height of the screen ie height:calc(100%-50px);*/
+        </style>
+    </head>
+    <body><!--Advance selector
+        <div>
+            <h1>I'm a h1</h1>
+            <h3>I'm a h3</h3>
+            <p>I m a paragraph</p>
+            <a href="" target="_blank">I'm a link</a>
+        </div>-->
+        <!--Pseudo class
+        <div>
+            <a href="">I'm a link</a>
+            <input>
+        </div>-->
+        <!--Gradients and shadow
+        <div id = "lineargradient"><h1>This is a Linear Gradient</h1></div>
+        <div id = "radialgradient"><h1>This is a Radial Gradient</h1></div>
+        <h2>This text is shadowed</h2>
+        <h3>This text is glowing</h3>
+        <h4>This text is multi-shadowed</h4>
+        <div id="box"></div>-->
+        
+        <!--Transformations and animations
+        <div id="box1">BOX</div>-->
+        
+        <!--Layout and calculation
+        <h1>Breaking News!</h1>
+        <div id="multicol">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis posuere tellus at luctus. Aenean dui massa, fringilla vehicula ligula eget, elementum ornare ex. Morbi nec lacinia felis. Ut nec varius enim. Donec consectetur, velit varius elementum porta, elit justo congue purus, quis congue est tortor in libero. Vivamus a posuere eros. Pellentesque id neque sodales, iaculis elit vitae, ornare risus. Curabitur rutrum justo eget mattis commodo. Donec elementum ex augue, ut varius velit tempor sed. Maecenas eget consectetur libero, quis venenatis neque. Mauris tempus nulla id diam congue luctus.<br><br> 
+        
+         Praesent pulvinar quam ac urna gravida congue. Etiam vitae eros scelerisque, facilisis dolor sit amet, mollis magna. Cras consectetur feugiat erat at mattis. Curabitur mollis varius sapien ac aliquet. Vivamus ac molestie massa. Suspendisse vel felis odio. Sed ut convallis metus. Fusce velit massa, faucibus vitae sapien a, gravida lacinia neque. Vestibulum quis ligula eros. Nulla molestie elit non massa ultrices, ac suscipit enim vestibulum. Etiam cursus mauris justo, et placerat orci viverra a.<br><br>
+
+        Vivamus venenatis condimentum eros eu tempor. Nulla id massa odio. Nulla a sem mauris. Quisque ultrices ac enim sit amet posuere. Aenean dapibus finibus arcu, non feugiat ante imperdiet sit amet. Sed a fringilla quam. Vestibulum a posuere lorem. Integer imperdiet massa 
+        id magna ornare, at fringilla dolor fermentum. Aenean molestie ante urna, non consectetur ligula eleifend et. Nulla iaculis aliquam lorem, non dictum risus consequat congue. Etiam eget arcu vitae ex semper elementum. Sed molestie nulla sapien, eget scelerisque massa lacinia ut. Integer pretium ac lectus blandit interdum. <br><br>
+        </div>-->
+        <!--flexbox and calc-->
+        <header></header>
+        <div id="container">
+            <div class="flexbox-container">
+                <div class="flexbox-container-item">Item 1</div>
+                <div class="flexbox-container-item">Item 2</div>
+                <div class="flexbox-container-item">Item 3</div>
+                <div class="flexbox-container-item">Item 4</div>
+            </div>
+        </div>
+    </body>
+</html>

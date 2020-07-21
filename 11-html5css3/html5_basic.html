@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head><title>HTML5 and CSS3</title></head>
+    <style>
+        #mycanvas{
+            border: 1px solid grey;
+        }
+    </style>
+    <body>
+        <!--Form Features-->
+        <form id="bio">
+            <p>Placeholder:<input type="text" placeholder="Insert text here"></p>
+            <p>Autofocus:<input type="text" autofocus></p><!--Autofocus makes the insert filed highlighted--> 
+            <p>Autocomplete(off):<input type="text" autocomplete="off"></p><!-- Autocomplete set to off(on is the default) makes sure and restrict browser to suggest autocomplete feature-->
+            <p>Required:<input type="text" required></p><!--It forces a field compulsorily to be filled when we click the submit button a popover comesup -->
+            <p>Email:<input type="email"></p><!--It gives a popover tht enter a valid email address if a simple text is filled in-->
+            <p>Pattern:<input type="text" pattern="[0-9]"></p><!--It will force the user to enter something relevant to the pattern specified ie single digit. For patterns, search google theres a website for thAt-->
+            <datalist id="names">
+                <option value="Ansh">Ansh</option>
+                <option value="Ayush">Ayush</option>
+                <option value="Kunal">Kunal</option>
+                <option value="Himanshu">Himanshu</option>
+                <option value="Harsh">Harsh</option>
+            </datalist><!--Some browser dont support datalist in that case put select tags in the datalist list encapsulating options-->
+            <p>Autocomplete:<input type="text" list="names"></p><!--It forces a list to a input similar to a drop down menu-->
+            <p>Multiple File upload:<input type="file" multiple></p><!--Allows user to upload multiple files if u want to restrict to a single file then remove multiple attribute-->
+            <p><input type="submit" value="submit"></p><!--can also specify a php file to be redirected to in case of submistion by using formaction attr here -->
+        </form>
+        <p>Outside form:<input form="bio" type="text"></p><!--Creates a link to the form-->
+        
+        <!--Audio and video-->
+        <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Please upgrade your browser!
+        </audio>
+        <video width="320" height="240" controls autoplay  id="video"><!--Used to embed video on the page, controls are used to introduce controls and autoplay is used to play the video as soon as the page is loaded-->
+            <source src="video.webm" type="video/webm"><!--To specify the source-->
+            Please upgrade your browser!<!--As a broswer warning if it fails to run the video-->
+        </video>
+        <button id="playpause">Play/Pause</button>
+        
+        <!--Canvas-->
+        <canvas id="mycanvas" height="400" width="500"></canvas>
+        <!--Different containers or section-->
+        <article></article>
+        <section></section>
+        <header></header>
+        <footer></footer>
+        <nav></nav>
+        <menu></menu>
+            <!--And you can style it as per your convience in styles-->
+            <!--We can also create a section for us like make a script
+              ex- document.createElement("Anshpara");
+              so now it is a tag and we can use in the html-->
+        <!--For images a different tag is used to create a section for images-->      
+        <figure>
+            <img src="https://www.syfy.com/sites/syfy/files/styles/1140x640_hero/public/wire/legacy/tonystark.jpg">
+            <figcaption><mark>Love you 3000!</mark><small>(vyfy)</small></figcaption><!--For captions and small is used to small the text, mark is used to highlight the text-->
+        </figure>      
+        <!--Can use data-description n all as done in app.js-->
+        <!--Can use range in a input-->
+        <input type="range" min="0" max="100" step="10"><!--min is the minimum value and max is the maximum value, step is kind of the speed of the sliderbar-->
+        <!--We can some content editable on our website using contenteditable attribute-->
+        <div contenteditable="true">This is editable content</div>
+        
+        <script>
+        //Some js to make the buttons works
+            document.getElementById("playpause").onclick=function(){
+                if(document.getElementById("video").paused){
+                    document.getElementById("video").play();
+                }
+                else{
+                    document.getElementById("video").pause();
+                }
+            }
+        //some js for canvas
+            var mycanvas = document.getElementById("mycanvas");
+            var context = mycanvas.getContext("2d");//Creating an object and specifying the we want it to be 2d
+            //gradient
+            var gradient = context.createLinearGradient(50, 50, 300, 200);//creating an object of conext to make gradient 50,50 initial position and 300,200 are the final position 
+            gradient.addColorStop(0, "white");//0 specifyies the initials and with color white
+            gradient.addColorStop(1, "red");//1 specifies the destination and with color red
+            context.fillStyle = gradient;//creting a gradient
+            context.fillStyle = "Red";//Giving color to fill style
+            context.fillRect(50, 50, 300, 200);//Creating a rectangle 50,50 as the starting pt of top left corner and 300 width and 200 height
+            context.moveTo(0, 400);//creating the starting point of a line
+            context.lineTo(500, 0);//creating the destiation point of a line
+            context.strokeStyle = "green";//specifying the line color
+            context.lineWidth = "20";//specifying the line width 
+            context.stroke();//creating the line
+            context.beginPath();//iniialising an arc
+            context.arc(100, 100, 50, 0, 2*Math.PI);//creating an arc with 100,100 as centre , 50 as radius , 0 rad to 2 radians ie a complete circle
+            context.stroke();//creating the arc
+            //text
+            //we can also add gradient to text
+            context.fillStyle = "black";//specifying the color of text
+            context.font = "20px Ariel";// font style and size
+            context.fillText("Ansh Rastogi", 200, 50);//string and initial point
+            
+        </script>
+    </body>
+</html>
