@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Disappering circles</title>
+         <style type="text/css">
+            #bor1{
+                background-color: crimson;
+                border: 10px black double;
+                border-radius: 60px;
+                }    
+            #bor2{
+                background-color: dodgerblue;
+                border: 10px black groove;
+                border-radius: 60px;
+                }
+            #bor3{
+                background-color:palegreen;
+                border: 10px black dotted;
+                border-radius: 60px;
+                }
+             .square{
+                height:100px;
+                width:100px;
+                margin:40px;
+                float:left;
+            }
+        </style>
+        </head>
+    <body>
+        <div id="bor1" class="square"></div>
+        <div id="bor2" class="square"></div>
+        <div id="bor3" class="square"></div>
+        <script type="text/javascript">
+             document.getElementById("bor1").onclick=function()
+            {
+                document.getElementById("bor1").style.display="none";
+            }
+             document.getElementById("bor2").onclick=function()
+            {
+                document.getElementById("bor2").style.display="none";
+            }
+             document.getElementById("bor3").onclick=function()
+            {
+                document.getElementById("bor3").style.display="none";
+            
+    }
+        </script>
+    </body>
+</html>
