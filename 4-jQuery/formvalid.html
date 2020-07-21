@@ -1,0 +1,122 @@
+<html>
+    <head><title>jQuery</title>
+        <link rel=icon href="https://pluspng.com/img-png/jquery-logo-png--800.gif">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+            body{
+                font-family: 'Dosis', sans-serif;
+                font-size: 160%;
+            }
+            input {
+
+                padding: 5px 5px 12px 5px;
+                font-size: 25px;
+                border-radius: 5px;
+                border: 1px solid grey;
+                width:320px;
+
+                }
+            label{
+                position:relative;
+                top:9px;
+                width:200px;
+                float:left;
+                }
+            #d1{
+                width:550px;
+                margin:0 auto;
+               }
+            .formelement{
+                margin-bottom: 5px;
+            }
+            #submitbutton{
+                width:130px;
+                margin-left: 200px;
+            }
+            #errmsg{
+                color:red;
+                font-size: 80% !important;
+                
+            }
+            #successmsg{
+                color:green;
+                font-size: 80% !important;
+                display: none;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1">
+            <div id="successmsg">Congrats! You successfully Signed Up</div>
+            <div id="errmsg"></div>
+            <div id="fieldmissing"></div>
+            <div class="formelement">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="eg. yourname@gmail.com">
+            </div>
+            <div class="formelement">
+                <label for="tele">Telephone</label>
+                <input type="number" name="tele" id="tele" placeholder="eg. 0123456789">
+            </div>
+            <div class="formelement">
+                <label for="pass">Password</label>
+                <input type="password" name="pass" id="pass">
+            </div>
+            <div class="formelement">
+                <label for="conpass">Confirm Password</label>
+                <input type="password" name="conpass" id="conpass">
+            </div>
+            <div class="formelement">
+                <input type="submit" id="submitbutton" value="Sign Up">
+            </div>
+        </div> 
+        <script type="text/javascript">
+            function isEmail(email) {
+                    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    return regex.test(email);
+                } 
+            $("#submitbutton").click(function(){
+                var errmsg = ""; 
+                var fieldmissing = "";
+                if($("#email").val() == ""){
+                    fieldmissing += "<br>Email";
+                }
+                if($("#tele").val() == ""){
+                    fieldmissing += "<br>Phone number";
+                }
+                if($("#pass").val() == ""){
+                    fieldmissing += "<br>Password";
+                }
+                if($("#conpass").val() == ""){
+                    fieldmissing += "<br>Confirm Password";
+                }
+                if(fieldmissing != ""){
+                    errmsg += "<p>The Following field(s) are missing</p>"+ fieldmissing;
+                }
+               if(isEmail($("#email").val())== false){
+                   errmsg += "<p>Your Email Address is invalid</p>"
+               }
+                if($.isNumeric($("#tele").val())== false){
+                    errmsg += "<p>Your Phone number is invalid</p>"
+                }
+                if($("#pass").val() != $("#conpass").val()){
+                    errmsg += "<p>The Entered passwords should be same</p>"
+                }
+                if(fieldmissing != ""){
+                    $("#fieldmissing").html(fieldmissing);
+                }
+                if(errmsg != ""){
+                    $("#errmsg").html(errmsg);
+                }
+                else{
+                    $("#successmsg").show();
+                    $("#errmsg").hide();
+                }
+            });
+        
+        </script>
+        
+    </body>
+</html>

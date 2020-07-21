@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <link rel=icon href="https://pluspng.com/img-png/jquery-logo-png--800.gif">
+        <script type="text/javascript" src="jquery-3.5.0.js"></script>
+        <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+        <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+        <style type="text/css">
+        
+            #draggablefree{
+                height:120px;
+                width:120px;
+                border:5px black solid;
+                margin-left:4px;
+                padding-left: 40px;
+            }
+            #draggablex{
+                height:120px;
+                width:120px;
+                border:5px black solid;
+                margin-left:4px;
+                padding-left: 40px;
+            }
+            #draggabley{
+                height:120px;
+                width:120px;
+                border:5px black solid;
+                margin-left:4px;
+                padding-left: 40px;
+            }
+            #conatainparent{
+                height:200px;
+                width:200px;
+                background-color: aquamarine; 
+                border:5px black solid;
+                margin-left:4px;
+                padding-left: 40px;
+                padding-right:0px;
+            }
+            #resize1{
+                border:3px black solid;
+                height:150px;
+                width:150px;
+                text-align: center;
+                background-color: lightgoldenrodyellow;
+            }
+            #resize2{
+                border:3px black solid;
+                height:150px;
+                width:150px;
+                text-align: center;
+                background-color:aliceblue;
+            }
+            #resize3{
+                border:3px black solid;
+                height:100px;
+                width:100px;
+                text-align: center;
+                background-color:beige;
+            }
+            #also{
+                border:3px black solid;
+                height:100px;
+                width:100px;
+                text-align: center;
+                background-color:beige;
+            }
+            #draggabledrop{
+                height:120px;
+                width:120px;float:left;
+                border:5px black solid;
+                float:left;
+                margin-left:4px;
+                padding-left: 40px;
+            }
+            #droppable1{
+                height:200px;
+                width:200px;
+                float:left;
+                border:5px black solid;
+                margin-left:4px;
+                padding-left: 40px;
+            }
+            .color1{
+                background-color: aqua;
+            }
+            #accordion1{
+                position: relative;
+                margin-left:300px;
+                height:400px;
+                width:400px;
+                
+            }
+            #sortable1{
+                position: relative;
+                margin-left:300px;
+                height:400px;
+                width:400px;
+            }
+            .border1{
+                border:1px grey solid;
+                height:20px;
+                width:80px;
+                margin-bottom: 5px; 
+            }
+        </style>
+    </head>
+    <body>
+        <!--Draggables divs
+        <div id="draggablefree">DRAG ME FREELY</div>
+        <div id="draggablex">DRAG ME HORIZONTALLY</div>
+        <div id="draggabley">DRAG ME VERTICALLY</div>
+        <div id="conatainparent">
+            <div id="draggablestruck"><span>I'm struck in here</span></div>
+        </div>-->
+        <!--Resizable divs
+        <div id="resize1">Resize me pls</div>
+        <div id="resize2">Resize Grid</div>
+        <div id="resize3">Resize the below one too</div>
+        <div id="also">I will resize automatically</div>-->
+        <!--Droppables divs
+        <div id="draggabledrop">DRAG ME TO THE TARGET</div>
+        <div id="droppable1"><p>DROP HERE!!</p></div>
+        <div class="color1"></div>-->
+        <!--Accordions div
+        <div id="accordion1">
+            <h3>Section 1</h3>
+            <p>Here is some content in Section 1</p>
+            <h3>Section 2</h3>
+            <p>Here is some content in Section 2</p>
+            <h3>Section 3</h3>
+            <p>Here is some content in Section 3</p>
+        </div>-->
+        <ul id="sortable1">
+            <li class="border1">Item 1</li>
+            <li class="border1">Item 2</li>
+            <li class="border1">Item 3</li>
+            <li class="border1">Item 4</li>
+            <li class="border1">Item 5</li>
+        </ul>
+        <div>
+            <label for="date1">Date:</label>
+            <input type="date">
+        </div>
+        
+        <script type="text/javascript">
+            //draggable
+            /*$("#draggablefree").draggable();
+            $("#draggablex").draggable({axis:"x"});
+            $("#draggabley").draggable({axis:"y"});
+            $("#draggablestruck").draggable({containment:"parent"});*/
+            //Resizables
+            /*$("#resize1").resizable();
+            $("#resize2").resizable({grid:50,resize: function( event, ui ){
+                if($("#resize2").width() > 300){
+                    alert("Big Enough!!!!")
+                }
+            }
+            $("#resize3").resizable({alsoResize:"#also"});
+            $("#also").resizable();*/
+            //Droppables
+            /*$("#draggabledrop").draggable();
+            $("#droppable1").droppable({
+                drop: function( event, ui){
+                    if($( this )){
+                     $(this).html("Dropped!!!");
+                     $(this).addClass("color1");    
+                     alert("Dropped");       
+                    }
+                }
+            });*/  
+            //Accordions
+            //$("#accordion1").accordion({collapsible:true});//remove collapsible to make it non collapsible
+            //Sortables
+            $("#sortable1").sortable();
+            $("#sortable1").disableSelection();
+            //Datepicker
+            $("date1").datepicker();
+        </script>
+    </body>
+</html>

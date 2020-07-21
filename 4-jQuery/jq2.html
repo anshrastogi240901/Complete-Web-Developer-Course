@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <link rel=icon href="https://pluspng.com/img-png/jquery-logo-png--800.gif">
+        <script type="text/javascript" src="jquery-3.5.0.js"></script>
+        <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+        <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+    </head>
+    <body>
+        <p id="p1"></p>
+        <script type="text/javascript">
+            //Online live implementation in case of AJAX
+            /*
+            $.get("info.txt",function(data){
+                alert(data);
+            }); or*/
+            //Using AJAX
+            /*$.ajax("info.txt").done(function(data){
+                alert(data);
+            }).fail(function(){
+                alert("Connection Error: Can't connect to server right now");
+            });
+            //Tiny challenge Ajax
+            $.ajax("info.txt").done(function(data){
+                $("#p1").html(data);
+            }).fail(function(){
+                alert("Connection Error: Can't connect to server right now"); 
+            });*/
+            //Regular Expressions
+            var regex = /is/i;
+            var str = "Regex Is great";
+            var result = str.match(regex);
+            alert(result);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/jquery-7-1175152.png">
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <script type="application/javascript" src="jQuery.min.js"></script>
+        <style type="text/css">
+            #c1{
+                height:100px;
+                width:100px;
+                border-radius: 50%;
+                background-color: red;
+            }
+            #r1{
+                height:100px;
+                width:100px;
+                background-color: blue;
+            }
+            .figure{
+                margin:50px;
+            }
+            
+        </style>
+    </head>
+    <body>
+       <div id="c1" class="figure"></div>
+       <!--<div id="r1" class="figure"></div>
+       <p id="p1">This text is going to fade out very soon and reappear.</p>
+       <button id="toggle">see the magic!!!!!!!</button>
+       <button id="but1">fade out</button>
+       <button id="but2">fade in</button>
+       <iframe src="https://www.codestars.com/"></iframe>
+       <p>This is some text</p>
+       <div class="r1"><p><span class="figure"></span></p></div>
+       <div class="r1"><p><span class="figure"></span></p></div>-->
+        <script type="text/javascript">
+            /* detecting clicks
+            $("#c1").click(function(){
+                           alert("circle was clicked");
+                           });
+            
+            $(".r1").click(function(){
+               alert("square is clicked"); 
+            });*/
+            /*for checking if jq is installed or not
+            if(typeof jQuery == "undefined")
+                alert("jQuery not installed!");
+            else
+                alert("jQuery installed correctly");*/
+            /*Changing wesite contnts
+            $("#c1").click(function(){
+                $("p").html('This text has changed');
+            });
+            $("#c1").hover(function(){
+                $("p").html('This text has changed');
+            });
+            $("#c1").hover(function(){
+                $("iframe").attr("src","https://www.indiatoday.in/");
+            });*/
+            /* Changing website style
+            $("div").click(function(){
+                //$("#c1").css("width","400px");
+                //$("#c1").css("background-color","Seagreen");
+                //alert( $("#c1").css("background-color"));
+                //alert($("body").css("width"));
+                //$("#c1").css("display","none");
+                //$(this).css("display","none");
+                alert("you have clicked "+ $(this).attr("id"));
+            });*/
+            /* Fading out content
+            $("div").click(function(){
+                //$(this).fadeOut();
+                //$(this).fadeOut("slow");
+                $(this).fadeOut("slow",function(){
+                    alert("Fadeout has completed");
+                });
+            });
+            //challenge
+            $("#but1").click(function(){
+                $("#p1").fadeOut("slow");
+            });
+            $("#but2").click(function(){
+                $("#p1").fadeIn("slow");
+            });
+            $("#toggle").click(function(){
+                if($("#p1").css("display") == "none"){
+                    $("#p1").fadeIn("slow");
+                }
+                else{
+                    $("#p1").fadeOut("slow");
+                }
+            });*/
+            /*Animating Content
+            $("#c1").click(function(){
+                $("#c1").animate({width:"800px",height:"300px",margin:"200px"},"2000",function(){
+                    $("#c1").css("background-color","blue");
+                });
+            });*/
+        </script>
+    </body>
+</html>
