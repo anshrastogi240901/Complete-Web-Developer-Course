@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel=icon href="http://anshrastogi-com.stackstaging.com/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>CodeShop App</title>
+    <style type="text/css">
+        .logo{
+             color:#0eeb0e;
+             font-family: 'Permanent Marker', cursive;
+        }  
+        .navcol{
+            background-color: #425970;
+        } 
+        .navbarcol{
+            color:#ccd7e8;
+        }
+        .navbar-nav .nav-item.active .nav-link,
+        .navbar-nav .nav-item:hover .nav-link {
+          color: #ffffff;
+        }
+        .custom-toggler.navbar-toggler {
+          border-color: #0eeb0e;
+        }
+        .custom-toggler .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(14, 235, 14, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+        .jumbotron{
+            text-align: center;
+            color:#0eeb0e;
+            font-weight: 900;
+            margin-top: 10px;
+            margin-bottom:0px;
+            background: none;
+        }
+        .jumbotron .bgjumbo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 350px;
+            background-image: url(jumbotron_bg.gif);
+            background-position: 0% 25%;
+            background-size:cover;
+            background-repeat: no-repeat;
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+             -o-filter: blur(5px);
+             -ms-filter: blur(5px);
+             filter: blur(5px);
+             z-index: -1;
+        }
+          
+          #footer {
+              margin-top: 30px;
+              background-color:darkcyan;
+              padding-top: 100px;
+              text-align: center;
+              padding-bottom: 100px;
+          }
+         #appStoreIcon {
+              
+              width: 200px;
+              
+          }
+        #linkcode{
+            color:#0eeb0e;
+        } 
+        #aboutme{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+    </style>  
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg fixed-top navcol">
+  <a class="navbar-brand logo" href="#"><img src="http://anshrastogi-com.stackstaging.com/icon.png" width="40" height="30" alt="">CodeShop</a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link navbarcol" href="#jumbo">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navbarcol" href="#aboutme">About the Developer</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navbarcol" href="#footer" >Download the App</a>
+      </li>
+    </ul>
+   <form class="form-inline pull-xs-right">
+            <input class="form-control" type="email" placeholder="Email">
+              <input class="form-control" type="password" placeholder="Password">
+            <button class="btn btn-success" type="submit">Login</button>
+    </form>
+  </div>
+</nav>
+<div class="jumbotron" id="jumbo">
+    <div class="bgjumbo"></div>
+  <h1 class="display-4" style="font-weight: bold;font-family:sans-serif"><a id="linkcode" href="http://anshrastogi-com.stackstaging.com/">CodeShop App</a></h1>
+  <p class="lead">A platform which let you try out your HTML5, CSS3 and JavaScript codes and see the live results.</p>
+  <hr class="my-4">
+  <p>Want to know more? Join our mailing list!</p>
+   <form class="form-inline justify-content-center">
+          <div class="form-group">
+            <label class="sr-only" for="email">Email address</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                  <div class="input-group-text">@</div>
+              </div>  
+              
+              <input type="email" class="form-control" id="email" placeholder="Your email">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign up</button>
+   </form>
+</div> 
+      <div style="text-align: center;font-family: 'Lobster', cursive; padding-top:30px; padding-top:30px; color:cornflowerblue;   "><h3>About the developer:</h3>
+      <p>(Hover to know me...)</p></div>      
+<div id="aboutme">
+     <img src="about.jpg" data-container="body" data-toggle="popover" data-content="Hey there, I'm Ansh Rastogi, currently pursuing Bachelor of Sciences in Computer Science from University of Delhi. I started learning web development a few weeks back and so far,I learnt HTML5, CSS3, JS, jQuery, BootStrap 4 and many more on the way. I made CodeShop as a project of my Web Development course and a big thanks to Rob Percival sir. Hope you enjoy my work." data-placement="right">
+</div>      
+      
+    <div id="footer">      
+                <h2>Download the app!</h2>
+            
+            <p class="lead">Really, why should I download this app??</p>
+            
+            <p><a href=""><img id="appStoreIcon" src="appstore.svg"></a></p>
+      
+      </div>
+      
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+       (function($)  {
+    $("[data-toggle=popover]").popover({
+      html: true,
+        content: function() {
+          return $('#popover-tour-content').html();
+        }
+      });
+      $("[data-toggle=popover]").popover('show')
+   }(jQuery));
+    </script>
+  </body>
+</html>
