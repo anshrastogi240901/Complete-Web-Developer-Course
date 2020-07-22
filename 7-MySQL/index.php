@@ -1,6 +1,6 @@
 <?php
 //Connection snd checking for errors
- $link = mysqli_connect("shareddb-u.hosting.stackcp.net", "UserCredentials-3133339199", "thehacker007@", "UserCredentials-3133339199");
+ $link = mysqli_connect("Yourhosturl", "Database Name", "Database Password", "Table Name which is usuall same as that of he database name");
  if(mysqli_connect_error()){
      echo "There's a problem in connecting to database.";
  }else{
