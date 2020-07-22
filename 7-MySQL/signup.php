@@ -3,7 +3,7 @@
 
     if (array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)) {
         
-        $link = mysqli_connect("shareddb-u.hosting.stackcp.net", "UserCredentials-3133339199", "thehacker007@", "UserCredentials-3133339199");
+        $link = mysqli_connect("yourhosturl", "Databasename", "databasepassword","table name same as database name");
 
             if (mysqli_connect_error()) {
         
