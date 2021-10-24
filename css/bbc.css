@@ -1,7 +1,7 @@
 #topbar {
                 
                 width:1000px;
-                margin:0 auto;
+                margin:auto;
                 height: 40px;
                 
                 
@@ -130,7 +130,7 @@
                 
                 padding:0;
                 margin:0;
-                color:white;
+                font-color: #ffffff
                 font-size: 40px;
                 font-weight: normal;
                 padding-top: 10px;
@@ -149,7 +149,7 @@
             
             #local-news a {
                 
-                color:white;
+                font-color: #ffffff
                 text-decoration: none;
                 font-size:30px;
                 position:relative;
@@ -186,13 +186,14 @@
             
             #menu-bar-2 a {
                 
-                color: white;
+                font-color: #ffffff
                 text-decoration: none;
-                padding: 0 10px;
+                padding:  10px;
                 border-right: 1px solid #BB4545;
                 font-size:14px;
                 position: relative;
-                top: 10px;
+                top: 10%;
+                left: 45%;
                 
             }
             
@@ -212,13 +213,14 @@
                 
                 height:10px;
                 position:relative;
-                top:10px;
+                top:10%;
+                left:45%;
             }
             
             #page-container {
                 
                 width:1000px;
-                margin: 0 auto;
+                margin: auto;
                 
             }
             
@@ -234,7 +236,7 @@
             
             h3 a {
                 
-                color:black;
+                font-color:#000000;
                 font-size: 30px;
                 text-decoration: none;
                 
@@ -256,9 +258,9 @@
             
             .clock {
                 
-                height:15px;
+                height:15%;
                 position: relative;
-                top:2px;
+                top:2%;
                 
             }
             
@@ -267,7 +269,7 @@
                 text-decoration: none;
                 color:#a91717;
                 border-left: 1px solid #CCCCCC;
-                padding-left: 10px;
+                padding-left: 10%;
                 
             }
             
@@ -309,7 +311,7 @@
             
             .article-link {
                 
-                color:black;
+                font-color:#000000;
                 text-decoration:none;
                 
             }
@@ -339,7 +341,7 @@
             .watch-listen-link {
                 
                 text-decoration: none;
-                color:black;
+                font-color:#000000;
                 font-weight:bold;
                 font-size:18px;
                 
@@ -347,7 +349,7 @@
             
             .watch-listen-link:hover {
                 
-                color:#1167a8;
+                color:#000000;
                 
             }
             
